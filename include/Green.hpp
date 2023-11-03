@@ -15,9 +15,17 @@
 #include <map>
 using namespace std;
 
+/**
+ * @brief GreenLine class for Green line map
+ * 
+ */
 class GreenLine {
     private:
 
+/**
+ * @brief data members to create green line map
+ * 
+ */
     protected:
     map<int,string>m;
     vector<pair<int,int>> *ptr;
@@ -27,8 +35,24 @@ class GreenLine {
         Initialize_Graph();
     }
 
+/**
+ * @brief Initialize_Graph() initialize the green line map through vector of pairs
+ * 
+ */
     void Initialize_Graph();
+
+/**
+ * @brief Getgreen function is used to get the station names in green line
+ * 
+ * @param val 
+ * @return string 
+ */
     string Getgreen(int val);
+
+/**
+ * @brief Destroy the Green Line object
+ * 
+ */
     ~GreenLine();
 
 };

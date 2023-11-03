@@ -1,6 +1,6 @@
 #include "Green.hpp"
 
-void GreenLine :: Initialize_Graph() {
+void GreenLine :: Initialize_Graph_Green() {
     (ptr+0)->push_back({1, 1});
     (ptr+1)->push_back({0, 1});
     (ptr+1)->push_back({2, 1});

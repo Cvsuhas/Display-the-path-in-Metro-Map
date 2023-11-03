@@ -32,14 +32,14 @@ class GreenLine {
 
     GreenLine() {
         ptr = new vector<pair<int,int>>[10];
-        Initialize_Graph();
+        Initialize_Graph_Green();
     }
 
 /**
  * @brief Initialize_Graph() initialize the green line map through vector of pairs
  * 
  */
-    void Initialize_Graph();
+    void Initialize_Graph_Green();
 
 /**
  * @brief Getgreen function is used to get the station names in green line

@@ -13,6 +13,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#define GREEN "\033[032m"
 using namespace std;
 
 /**

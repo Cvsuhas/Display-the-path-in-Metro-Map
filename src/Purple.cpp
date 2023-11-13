@@ -40,6 +40,13 @@ void PurpleLine :: Initialize_Graph_purple() {
     (ptr1+36)->push_back({37, 6}); (ptr1+37)->push_back({36, 6});
 }
 
+/**
+ * @brief Station names in purple line
+ * 
+ * @param val 
+ * @return string 
+ */
+
 string PurpleLine :: Getpurple(int val) {
     m1[0] = "Whitefield (Kadugodi)"; m1[1] = "Hopefarm Channasandra"; m1[2] = "Kadugodi Tree Park"; m1[3] = "Pattanduru Agrahara";
     m1[4] = "Sri Sathya Sai Hospital"; m1[5] = "Nallurhalli"; m1[6] = "Kundalahalli"; m1[7] = "Seetharamapalya";

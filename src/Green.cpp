@@ -31,6 +31,12 @@ void GreenLine :: Initialize_Graph_Green() {
     (ptr+27)->push_back({28, 1}); (ptr+28)->push_back({27, 1});
 }
 
+/**
+ * @brief station names for green line
+ * 
+ * @param val 
+ * @return string 
+ */
 string GreenLine :: Getgreen(int val) {
     m[0] = "Nagasandra"; m[1] = "Dasarahalli"; m[2] = "Jalahalli"; m[3] = "Peenya Industry";
     m[4] = "Peenya"; m[5] = "Goraguntepalya"; m[6] = "Yeshwanthpura"; m[7] = "Sandal Soap Factory";

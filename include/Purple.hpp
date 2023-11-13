@@ -13,6 +13,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#define PURPLE "\033[35m"
 using namespace std;
 
 /**
@@ -59,3 +60,5 @@ class PurpleLine {
  */
     ~PurpleLine();
 };
+
+#endif

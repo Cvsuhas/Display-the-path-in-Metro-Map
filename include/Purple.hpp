@@ -36,7 +36,7 @@ class PurpleLine {
  * 
  */
     PurpleLine() {
-        ptr1 = new vector<pair<int,int>>[10];
+        ptr1 = new vector<pair<int,int>>[37];
         Initialize_Graph_purple();
     }
 

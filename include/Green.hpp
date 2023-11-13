@@ -32,7 +32,7 @@ class GreenLine {
     vector<pair<int,int>> *ptr;
 
     GreenLine() {
-        ptr = new vector<pair<int,int>>[10];
+        ptr = new vector<pair<int,int>>[29];
         Initialize_Graph_Green();
     }
 

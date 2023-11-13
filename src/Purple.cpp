@@ -33,11 +33,10 @@ void PurpleLine :: Initialize_Graph_purple() {
     (ptr1+29)->push_back({30, 1}); (ptr1+30)->push_back({29, 1});
     (ptr1+30)->push_back({31, 1}); (ptr1+31)->push_back({30, 1});
     (ptr1+31)->push_back({32, 1}); (ptr1+32)->push_back({31, 1});
-    (ptr1+32)->push_back({33, 1}); (ptr1+33)->push_back({32, 1});
-    (ptr1+33)->push_back({34, 2}); (ptr1+34)->push_back({33, 2});
+    (ptr1+32)->push_back({33, 2}); (ptr1+33)->push_back({32, 2});
+    (ptr1+33)->push_back({34, 1}); (ptr1+34)->push_back({33, 1});
     (ptr1+34)->push_back({35, 2}); (ptr1+35)->push_back({34, 2});
-    (ptr1+35)->push_back({36, 2}); (ptr1+36)->push_back({35, 2});
-    (ptr1+36)->push_back({37, 6}); (ptr1+37)->push_back({36, 6});
+    (ptr1+35)->push_back({36, 6}); (ptr1+36)->push_back({35, 6});
 }
 
 /**

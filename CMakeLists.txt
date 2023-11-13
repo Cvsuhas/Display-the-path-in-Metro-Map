@@ -11,7 +11,7 @@ include_directories(include)
 add_library(graph src/Green.cpp src/Purple.cpp src/Graph.cpp)
 
 #add executable main
-add_executable(main src/main.cpp)
+add_executable(display_map src/main.cpp)
 
 #link executable and library
-target_link_libraries(main graph)
+target_link_libraries(display_map graph)

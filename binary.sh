@@ -13,4 +13,4 @@ make
 
 echo "**Build Successfull"
 
-echo "to run the executable go to binary directory and execute ./display_map
+echo "to run the executable go to binary directory and execute ./display_map"

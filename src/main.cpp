@@ -98,24 +98,28 @@ int main() {
                 }
 
                 system("clear");
-                if (green_src && green_dst) {   
+                if (green_src && green_dst && src>=0 && src<=28 && dst>=0 && dst<=28) {
                     obj.Shortest_path(src,dst,"Green");
                     display = true;
                 }
-                else if (purple_src && purple_dst) {
+                else if (purple_src && purple_dst && src>=0 && src<=36 && dst>=0 && dst<=36) {
                     obj.Shortest_path(src,dst,"Purple");
                     display = true;
                 }
-                else if(green_src && purple_dst) {
+                else if(green_src && purple_dst && src>=0 && src<=28 && dst>=0 && dst<=36) {
                     obj.Shortest_path(src,13,"Green");
                     cout<<endl<<RED<<"Change the Line"<<RESET<<endl;
                     obj.Shortest_path(22,dst,"Purple");
                     display = true;
                 }
-                else if(purple_src && green_dst) {
+                else if(purple_src && green_dst && src>=0 && src<=36 && dst>=0 && dst<=28) {
                     obj.Shortest_path(src,22,"Purple");
                     cout<<endl<<RED<<"Change the Line"<<RESET<<endl;
                     obj.Shortest_path(13,dst,"Green");
+                    display = true;
+                }
+                else {
+                    cout<<"Invalid source and destination number please choose the correct number"<<endl;
                     display = true;
                 }
                 cout<<endl;
@@ -128,6 +132,7 @@ int main() {
 
             default:
                 cout<<endl<<RED<<"Enter the choice between 1-3 "<<RESET<<endl;
+                display = true;
                 break;
         }        
     }

@@ -21,6 +21,7 @@ int main() {
         int src,dst;
         bool green_src = false; bool green_dst = false;
         bool purple_src = false; bool purple_dst = false;
+
         if(!display)
             system("clear");    
         display = false;
@@ -46,9 +47,18 @@ int main() {
                 int choice_2;
                 bool source = false;
                 bool destination = false;
+                bool display_1 = false;
+
                 last_1:
-                system("clear");
-                cout<<"Choose the Line"<<endl;
+                if(!display_1)
+                    system("clear");
+                display_1 = false;
+
+                if(source)
+                    cout<<"Choose the Line of Destination location"<<endl;
+                else
+                    cout<<"Choose the Line of Source location"<<endl;
+
                 cout<<GREEN<<"[1] Green Line"<<RESET<<endl;
                 cout<<PURPLE<<"[2] Purple Line"<<RESET<<endl;
                 cout<<"[3] Go Back"<<endl;
@@ -95,6 +105,13 @@ int main() {
                     case 3:
                         goto last;
                         break;
+
+                    default:
+                        cout<<RED<<"Enter the choice between 1-3 "<<RESET<<endl;
+                        cout<<endl;
+                        display_1 = true;
+                        goto last_1;
+                        break;
                 }
 
                 system("clear");
@@ -119,7 +136,7 @@ int main() {
                     display = true;
                 }
                 else {
-                    cout<<"Invalid source and destination number please choose the correct number"<<endl;
+                    cout<<RED<<"Invalid source and destination number please choose the correct number"<<RESET<<endl;
                     display = true;
                 }
                 cout<<endl;
@@ -131,8 +148,10 @@ int main() {
                 exit(0);
 
             default:
-                cout<<endl<<RED<<"Enter the choice between 1-3 "<<RESET<<endl;
+                cout<<RED<<"Enter the choice between 1-3 "<<RESET<<endl;
+                cout<<endl;
                 display = true;
+                goto last;
                 break;
         }        
     }

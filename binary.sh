@@ -1,6 +1,6 @@
 #! /bin/bash
 
-echo "generating executable for Todo_Lists"
+echo "generating executable for Display-the-path-in-Metro-Map"
 
 if [ ! -d "binary" ]; then
 	mkdir binary

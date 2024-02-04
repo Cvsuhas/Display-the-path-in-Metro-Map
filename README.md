@@ -11,7 +11,7 @@ These instructions will help you set up and run the project on your local machin
 - [Optional] Git (for cloning the repository)
 
 ### Installation
-1. Clone the repository (if you haven't already):
+1. Clone the repository. Latest branch is smart_graph. (if you haven't already):
 
    ```bash
    git@github.com:Cvsuhas/Display-the-path-in-Metro-Map.git

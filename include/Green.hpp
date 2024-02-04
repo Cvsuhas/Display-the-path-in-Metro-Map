@@ -12,6 +12,7 @@
 
 #include <iostream>
 #include <vector>
+#include <memory>
 #include <map>
 #define GREEN "\033[032m"
 using namespace std;
@@ -25,14 +26,14 @@ class GreenLine {
 
 /**
  * @brief data members to create green line map
+ * @brief shared_pointer for creation of weighted undirected graph
  * 
  */
     protected:
     map<int,string>m;
-    vector<pair<int,int>> *ptr;
+    shared_ptr<vector<pair<int,int>>[]> ptr;
 
-    GreenLine() {
-        ptr = new vector<pair<int,int>>[29];
+    GreenLine() : ptr(new vector<pair<int,int>>[29], [](vector<pair<int,int>> *p) {delete[] p;}) {
         Initialize_Graph_Green();
     }
 

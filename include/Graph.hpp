@@ -15,6 +15,7 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <memory>
 #define INF 1000
 #define N 50
 #define RESET "\033[0m"
@@ -26,7 +27,7 @@ using namespace std;
 
 class Graph : private GreenLine, private PurpleLine {
     private:
-    vector<pair<int,int>> *p;
+    shared_ptr<vector<pair<int,int>>[]> p;
 
     public:
 

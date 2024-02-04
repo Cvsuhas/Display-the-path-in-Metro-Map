@@ -12,6 +12,7 @@
 
 #include <iostream>
 #include <vector>
+#include <memory>
 #include <map>
 #define PURPLE "\033[35m"
 using namespace std;
@@ -25,18 +26,18 @@ class PurpleLine {
 
 /**
  * @brief data members to create purple line map
+ * @brief shared_pointer for creation of weighted undirected graph
  * 
  */
     protected:
     map<int,string>m1;
-    vector<pair<int,int>> *ptr1;
+    shared_ptr<vector<pair<int,int>>[]> ptr1;
 
 /**
  * @brief Construct a new Purple Line object
  * 
  */
-    PurpleLine() {
-        ptr1 = new vector<pair<int,int>>[37];
+    PurpleLine() : ptr1(new vector<pair<int,int>>[37], [](vector<pair<int,int>> *p ) { delete[] p; }) {
         Initialize_Graph_purple();
     }
 

@@ -60,7 +60,7 @@ void Graph :: Shortest_path(int src,int dst,string s) {
         int u = pq.top().second;
         pq.pop();
 
-        for(auto i : *(p+u)) {
+        for(auto i : p[u]) {
             int v = i.first;
             int w = i.second;
             if(dist[v]> dist[u]+w) {
@@ -84,5 +84,5 @@ void Graph :: Shortest_path(int src,int dst,string s) {
 }
 
 Graph :: ~Graph() {
-    delete[] p;
+    
 }

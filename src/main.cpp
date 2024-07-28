@@ -11,6 +11,23 @@
 
 #include "Graph.hpp"
 
+int CheckValidInput() {
+    bool valid_input = false;
+    int input;
+    while(!valid_input) {
+        cin>>input;
+        if(cin.fail()) {
+            cout<<RED<<"Invalid Input! Expects an Integer"<<RESET<<endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(),'\n');
+        }
+        else
+            valid_input = true;
+    }
+
+    return input;
+}
+
 int main() {
     Graph obj;  //Graph object
     int choice;
@@ -28,7 +45,7 @@ int main() {
         cout<<"[1] Display the list of Stations"<<endl;     //Displays the station names
         cout<<"[2] Display the path from source to destination"<<endl;  //uses Dijkstar's algorthm to find path between source and destination
         cout<<"[3] Quit"<<endl;
-        cin>>choice;
+        choice = CheckValidInput();
 
         switch (choice) {
 
@@ -62,7 +79,7 @@ int main() {
                 cout<<GREEN<<"[1] Green Line"<<RESET<<endl;
                 cout<<PURPLE<<"[2] Purple Line"<<RESET<<endl;
                 cout<<"[3] Go Back"<<endl;
-                cin>>choice_2;
+                choice_2 = CheckValidInput();
 
                 switch (choice_2) {
 
@@ -70,14 +87,14 @@ int main() {
                     {
                         if(!source) {
                             cout<<"enter the source location number"<<endl;
-                            cin>>src;
+                            src = CheckValidInput();
                             source = true;
                             green_src = true;
                             goto last_1;
                         }
                         else {
                             cout<<"enter the destination location number"<<endl;
-                            cin>>dst;
+                            dst = CheckValidInput();
                             destination = true;
                             green_dst = true;
                         }
@@ -88,14 +105,14 @@ int main() {
                     {
                         if(!source) {
                             cout<<"enter the source location"<<endl;
-                            cin>>src;
+                            src = CheckValidInput();
                             source = true;
                             purple_src = true;
                             goto last_1;
                         }
                         else {
                             cout<<"enter the destination location"<<endl;
-                            cin>>dst;
+                            dst = CheckValidInput();
                             destination = true;
                             purple_dst = true;
                         }

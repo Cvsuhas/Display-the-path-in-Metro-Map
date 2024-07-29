@@ -8,10 +8,11 @@ These instructions will help you set up and run the project on your local machin
 ### Prerequisites
 
 - C++ compiler
+- CMake
 - [Optional] Git (for cloning the repository)
 
 ### Installation
-1. Clone the repository. Latest branch is smart_graph. (if you haven't already):
+1. Clone the repository.
 
    ```bash
    git@github.com:Cvsuhas/Display-the-path-in-Metro-Map.git
